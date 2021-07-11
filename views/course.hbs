@@ -1,0 +1,43 @@
+<h1>My Course</h1>
+
+
+{{#if courses.length}}
+{{#each courses}}
+<div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{images}}">
+          <span class="card-title">{{title}}</span>
+        </div>
+        <div class='price'>
+            {{price}}
+        </div>
+
+        <div class="card-action">
+          <a href="/course/{{id}}">Open this course</a>
+          {{#if @root.isAuth}}
+          {{#ifeq userId._id @root.userId}}
+            <a href="/course/{{id}}/edit?allow=true">Edit this course</a>   
+          {{/ifeq}}
+          <form action="/card/add" method="post">
+          <input type="hidden" name="_csrf" value="{{@root.csrf}}">
+          <input type="hidden" name="id" value={{id}}>
+            
+
+            <button class="btn btn-primary"> Buy Course</button>
+          </form>
+          {{else}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
+{{else}}
+<p>Courses is not defined</p>
+{{/if}}
+
+
+
+

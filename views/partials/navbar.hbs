@@ -1,0 +1,77 @@
+ <nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Приложение курсов</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      <li><a href="/">Главная</a></li>
+
+      <li><a href="/course">Курсы</a></li>
+
+      {{#if isAuth}}
+
+        <li><a href="/add-course">Добавить курс</a></li>
+        <li><a href="/profile">Профиль</a></li>
+        <li><a href="/card">Коризна</a></li>
+        <li><a href="/orders">Заказы</a></li>
+        <li><a href="/auth/logout">Выйти</a></li>
+        <li><a href="/online/users">Смотреть онлайн</a></li>
+
+      {{else}}
+       <li><a href="/auth/login#login">Login</a></li>
+      {{/if}}
+
+     
+
+    </ul>
+  </div>
+</nav> 
+
+
+
+{{!-- <nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Приложение курсов</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      {{#if isHome}}
+        <li class="active"><a href="/">Главная</a></li>
+      {{else}}
+        <li><a href="/">Главная</a></li>
+      {{/if}}
+
+      {{#if isCourses}}
+        <li class="active"><a href="/course">Курсы</a></li>
+      {{else}}
+        <li><a href="/course">Курсы</a></li>
+      {{/if}}
+
+      {{#if isAuth}}
+        {{#if isAdd}}
+          <li class="active"><a href="/add">Добавить курс</a></li>
+        {{else}}
+          <li><a href="/add">Добавить курс</a></li>
+        {{/if}} 
+
+        {{#if isCard}}
+          <li class="active"><a href="/card">Корзина</a></li>
+        {{else}}
+          <li><a href="/card">Корзина</a></li>
+        {{/if}} 
+
+        {{#if isOrder}}
+          <li class="active"><a href="/orders">Заказы</a></li>
+        {{else}}
+          <li><a href="/orders">Заказы</a></li>
+        {{/if}} 
+
+        <li><a href="/auth/logout">Выйти</a></li>
+      {{else}}
+        {{#if isLogin}}
+          <li class="active"><a href="/auth/login#login">Войти</a></li>
+        {{else}}
+          <li><a href="/auth/login#login">Войти</a></li>
+        {{/if}} 
+      {{/if}}
+    </ul>
+  </div>
+</nav>  --}}

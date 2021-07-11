@@ -1,0 +1,20 @@
+<h3>{{title}}</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each items}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{email}}</td>
+            <td>{{_id}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
